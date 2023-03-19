@@ -1,8 +1,8 @@
-import core from '@actions/core';
-import github from '@actions/github';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { connected } from 'process';
+const core = require('@actions/core');
+const github = require('@actions/github');
+const fs = require('fs');
+const matter = require('gray-matter');
+const { connected } = require('process');
 
 async function checkFileExistence(path) {
   return fs.promises
