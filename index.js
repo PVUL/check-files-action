@@ -36,7 +36,15 @@ async function checkFileStartsWithHeader(filePath) {
   try {
     // checkFileExistence('README.md');
     // checkFileExistence('LICENSE');
-    checkFileStartsWithHeader('README.md');
+
+    console.log(github.context);
+
+    if (!checkFileStartsWithHeader('README.md')) {
+      // const token = core.getInput('repo-token')
+      // console.log(token)
+      // console.log(github)
+      // const octokit = new github.getOctokit(token)
+    }
   } catch (error) {
     core.setFailed(error.message);
   }
