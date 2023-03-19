@@ -23,7 +23,7 @@ async function checkFileExistence(path) {
  * @param path
  * @returns frontmatter
  */
-const getFrontmatterFromPath = (path: string) => {
+const getFrontmatterFromPath = (path) => {
   const fileContents = fs.readFileSync(path, 'utf-8');
   return matter(fileContents);
 };
