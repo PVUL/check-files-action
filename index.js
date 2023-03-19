@@ -71,6 +71,17 @@ async function checkFileStartsWithHeader(filePath) {
 
 (async () => {
   try {
+    /**
+     * NOTE: Prior to entering this github action,
+     *       I am using https://github.com/dorny/paths-filter/
+     *       to filter the following:
+     *       - only single file change in PR
+     *       - change is an added file to an allowed folder
+     *       - file is of .mdx filetype
+     *
+     *       when all these conditions are met, the filepath is
+     *       passed into this action as an env var, filePath.
+     */
     const filePath = process.env.filePath; // ie. `_content/posts/_/2023-03-13_test.mdx`
     checkFrontmatterFields(filePath);
   } catch (error) {
