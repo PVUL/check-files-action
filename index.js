@@ -37,7 +37,8 @@ async function checkFileStartsWithHeader(filePath) {
     // checkFileExistence('README.md');
     // checkFileExistence('LICENSE');
 
-    console.log(github.context);
+    console.log('process.env.filePath', process.env.filePath);
+    console.log('github env', github.env);
 
     if (!checkFileStartsWithHeader('README.md')) {
       // const token = core.getInput('repo-token')

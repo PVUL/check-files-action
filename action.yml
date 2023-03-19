@@ -3,8 +3,3 @@ description: 'An action that checks if the LICENSE and README.md files exists'
 runs:
   using: 'node16'
   main: 'index.js'
-# inputs:
-#   repo-token:
-#     description: 'GitHub Token'
-#     required: true
-#     default: ${{github.token}}
